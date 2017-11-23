@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>div-google angular directive</title>
+	<link rel="stylesheet" type="text/css" href="custom.css">
+</head>
+<body >
+	<div ng-app="app">
+		<div ng-controller="myCtrl">
+			<input data-ng-model="lat" placeholder="lat" />
+			<input data-ng-model="long" placeholder="long" />
+			<button data-ng-click="draw()">draw</button>
+			<button data-ng-click="loadLatLong()">Load Marker Location</button>
+			<div class="loading">
+				loading
+			</div>
+			<div-google marker='{"geoLocation":[{"x": 51.508742, "y": -0.120850}], "icon":[{"url": "icon.png", "width":20, "height":32 }]}' width="1000px" height="300px" x="50px" y="50px"></div-google>
+			<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+		</div>
+	</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSDBn7lM4AuQ6idY8clXRHHnqGdE9RHhM&libraries=places"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="custom.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
